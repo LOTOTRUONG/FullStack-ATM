@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+$font-family: "Nunito", sans-serif;
+$primary-color: #0f8a8a;
+$background-color: #fff;
+$border-radius: 30px;
+$box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+$input-background-color: #eee;
+$input-border-radius: 8px;
+$button-border-radius: 25px;
+$button-font-weight: 600;
+$button-letter-spacing: 0.5px;
+$button-text-transform: uppercase;
+$social-icon-border-radius: 20%;
+$social-icon-size: 40px;
+$social-icon-transition: all 0.5s;
+$toggle-background-gradient: linear-gradient(to left, #00a1ff, #00ff8f);
+$toggle-color: #fff;
+$toggle-width: 200%;
+$toggle-transition: all 0.6s ease-in-out;
+
+.parent {
+  font-family: $font-family;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left, #ffffff, #d1fae0);
+  height: 643.84px; // 1/4 real size of atm interface
+  width: 1143.87px; // 1/4 real size of atm interface
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+.container{
+  position: fixed;
+  top: 0px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px;
+  img{
+    margin-right: 10px;
+    width: 11%;
+  }
+  h4{
+    margin: 0;
+    line-height: 1.5;
+  }
+  .container-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.grid-container {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  gap: 36px;
+  width: 920px;
+  margin: 16px auto 0;
+    p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+  }
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .text{
+        font-size: 20px;
+        font-weight: 600;
+        padding: 16px 0;
+    }
+    .input-field {
+        padding: 10px;
+        font-size: 18px;
+        border: 0.5px solid #ccc;
+        border-radius: 5px;
+        width: 80%;
+        transition: border-color 0.3s ease-in-out;
+        margin: 16px 0px;
+      }
+
+    .information-button{
+        display: flex;
+        flex-direction: row-reverse;
+        right: 10%;
+        margin-top: 24px;
+        width: 80%;
+        height: 42px;
+        button {
+            background-color: $primary-color;
+            color: $toggle-color;
+            font-size: 16px;
+            padding: 0 16px;
+            height: 100%;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0 16px;
+            i{
+                padding-right: 16px;
+            }
+          }
+        :hover{
+            background-color: #54c0c0;
+            font-size: 18px;
+        }
+      }
+  }
+.virtual-keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+        .ui-virtual-keyboard {
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            background-color: #0c7373;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            cursor: pointer;
+      }
+      .ui-virtual-keyboard:hover{
+        background-color: #54c0c0;
+      }
+      .ui-virtual-keyboard.empty {
+        background-color: transparent;
+        max-width:20% ;
+        border: none;
+    } 
+}
+
+}
+.loading-overlay{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  svg {
+    .wheel{
+    transform-box:fill-box;
+    transform-origin: 50% 50%;
+    animation: turn 3800ms linear infinite ;
+     @keyframes turn  {
+    to {
+    transform: rotate(1turn); 
+     }
+    }
+    }
+    .wheel_2{
+    transform-box:fill-box;
+    transform-origin: 50% 50%;
+    animation: unturn 3800ms linear infinite ;
+    @keyframes unturn  {
+    to {
+     transform: rotate(-1turn); 
+     }
+     }
+    }
+    }
+}
+
+.container-bottom{
+  position:fixed;
+  right: 11%;
+  bottom: 6%;
+  display: flex;
+  flex-direction: row;
+  button {
+    color: #0c7373;
+    font-size: 36px;
+    border: none;
+    background-color: transparent;
+    border-radius: $button-border-radius;
+    cursor: pointer;
+    margin: 0px 16px;
+    :hover{
+      color: #28bebe;
+      font-size: 48px;
+    }
+  }
+}
+
+
+@media print {
+  .parent {
+    visibility: hidden;
+  }
+}

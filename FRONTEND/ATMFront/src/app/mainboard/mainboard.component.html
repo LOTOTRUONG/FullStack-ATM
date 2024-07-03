@@ -1,0 +1,38 @@
+<div class="parent">
+    <div class="container">
+            <img src="../../assets/logo.png" alt="logo">
+            <div class="container-text">
+                <div><h4><strong>Customer support</strong></h4></div>
+                <div><p> <i class="bi bi-telephone-fill"></i>
+                    (+33) 01 23 45 67 89</p></div>
+            </div>
+            
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <button (click)="navigateToWithdraw()"><span>Withdraw</span></button>
+        </div>
+        <div class="grid-item empty"></div>
+        <div class="grid-item">
+            <button (click)="navigateToDeposite()"><span>Deposit</span></button>
+        </div>
+        <div class="grid-item">
+            <button>...</button>
+        </div>
+        <div class="grid-item empty"></div>
+        <div class="grid-item">
+            <button (click)="navigateToBalance()"><span>Balance</span></button>
+        </div>
+        <div class="grid-item empty">
+        </div>
+        <div class="grid-item empty"></div>
+        <div class="grid-item">
+            <button (click)="onLogOff()"><span>LogOut</span></button>
+        </div>
+    </div>             
+  </div>
+
+  <router-outlet></router-outlet>
+
+  

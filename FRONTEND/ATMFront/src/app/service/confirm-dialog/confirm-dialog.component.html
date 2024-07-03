@@ -1,0 +1,13 @@
+<div class="notification">
+  <div class="notification-header">
+    <h4 class='title success'>CONFIRMATION</h4>
+  </div>
+  <div class='message-container'>
+    <p class='message success'>{{ data.message }}</p>
+    <div class="message-button">
+      <button (click)="onCancel()" class="cancel">Cancel</button>
+      <button color="warn" (click)="onConfirm()">Confirm</button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,24 @@
+<div class="parent">
+  <div class="container" id="container">
+
+    <div class = "image-container">
+      <img src="../../assets/logo.png" alt="logo" width="18%">
+    </div>
+
+    <div class="form-container">
+
+      <form [formGroup]="codeForm" (ngSubmit)="onOK($event)">
+
+        <h1>Please enter your code</h1>
+
+        <input type="password" id="pinCodeInput" formControlName="pinCode" class="pinCode-input">
+
+        <button style="background-color: #042711;">Enter</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>

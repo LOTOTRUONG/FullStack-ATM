@@ -1,0 +1,71 @@
+<div class="parent">
+    <div class="container">
+            <img src="../../assets/logo.png" alt="logo">
+            <div class="container1-text">
+                <h3>Customer support</h3>
+                <p>(+33) 01 23 45 67 89</p>
+            </div>
+    </div>
+        
+    <div class="receipt-container">
+        <div class="receipt">
+            <div _ngcontent-ng-c309662892="" class="break"> ***************************************************** </div>
+            <h2 class="header">ATM TRANSACTION</h2>
+        <div class="text">
+                LOTO BANK
+            </div>
+            <div _ngcontent-ng-c309662892="" class="break"> ***************************************************** </div>
+            <div class="details">
+                <div class="detail">TERMINAL#</div>
+                <div class="detail"></div>
+            </div>
+            <div class="details">
+                <div class="detail">SEQUENCE#</div>
+                <div class="detail"></div>
+            </div>
+            <div class="details">
+                <div class="detail">DATE</div>
+                <div class="detail">{{ currentDate }}</div>
+            </div>
+        <div class="break">
+        </div>
+        <div class="details">
+                <div class="detail">ACCOUNT NUMBER</div>
+                <div class="detail" *ngIf="accountNumber">{{ accountNumber }}</div>
+            </div>
+        <div class="break">
+        </div>
+        <div class="details">
+                <div class="detail">CUSTOMER NAME</div>
+                <div class="detail" *ngIf="name">{{ name }}</div>
+            </div>
+    
+        <div class="break">
+        </div>
+        <div class="details">
+                <div class="detail">{{nameTransaction}}</div>
+                <div class="detail">{{amountTransaction}}<i class="bi bi-currency-euro"></i></div>
+            </div>
+        
+            <div _ngcontent-ng-c309662892="" class="break"> ***************************************************** </div>
+    
+          <div class="text">Thank you for using Loto Bank ATM</div>
+    </div>
+             
+  </div>
+
+  <div class="container-bottom">
+    <button (click)="printPage()">
+        <i class="bi bi-printer-fill"></i>
+      </button>
+    <button (click)="onBack()">
+    <i class="bi bi-skip-backward-btn-fill"></i>
+    </button>
+    
+    <button (click)="onBackToHomePage()">
+        <i class="bi bi-house-door-fill"></i>
+    </button>
+
+    </div>
+  
+</div>

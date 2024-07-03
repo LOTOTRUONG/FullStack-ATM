@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+$font-family: "Nunito", sans-serif;
+$primary-color: #6221b8;
+$background-color: #fff;
+$border-radius: 30px;
+$box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+$input-background-color: #eee;
+$input-border-radius: 8px;
+$button-border-radius: 25px;
+$button-font-weight: 600;
+$button-letter-spacing: 0.5px;
+$button-text-transform: uppercase;
+$social-icon-border-radius: 20%;
+$social-icon-size: 40px;
+$social-icon-transition: all 0.5s;
+$toggle-background-gradient: linear-gradient(to left, #00a1ff, #00ff8f);
+$toggle-color: #fff;
+$toggle-width: 200%;
+$toggle-transition: all 0.6s ease-in-out;
+
+.parent {
+  font-family: $font-family;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left, #ffffff, #d1fae0);
+  height: 643.84px; // 1/4 real size of atm interface
+  width: 1143.87px; // 1/4 real size of atm interface
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+
+
+.container {
+  position: relative;
+  overflow: hidden;
+  h1 {
+    font-weight: 800;
+    font-size: 2rem;
+    margin: 12px 0;
+    text-transform: uppercase;
+  }
+
+  button {
+    background-color: $primary-color;
+    color: $toggle-color;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: $button-border-radius;
+    font-weight: $button-font-weight;
+    letter-spacing: $button-letter-spacing;
+    text-transform: $button-text-transform;
+    margin-top: 20px;
+    cursor: pointer;
+
+    &.hidden {
+      background-color: transparent;
+      border-color: $toggle-color;
+    }
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 120px;
+    height: 100%;
+    margin-bottom: 64px;
+  }
+
+  input {
+    background-color: $input-background-color;
+    border: none;
+    margin: 16px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: $input-border-radius;
+    width: 54%;
+    height: 3rem;
+    outline: none;
+    text-align: center;
+  }
+
+  .image-container{
+    display: flex; 
+    justify-content: center;
+    margin: 32px;
+  }
+
+}

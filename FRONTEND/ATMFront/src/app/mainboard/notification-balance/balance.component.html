@@ -1,0 +1,38 @@
+<div class="parent" >
+    <div class="container">
+            <img src="../../assets/logo.png" alt="logo">
+            <div class="container-text">
+              <div><h4><strong>Customer support</strong></h4></div>
+              <div><p> <i class="bi bi-telephone-fill"></i>
+                  (+33) 01 23 45 67 89</p></div>
+          </div>
+            
+    </div>
+
+    <div class="content-container">
+      <div class="header"> 
+        <i class="bi bi-wallet-fill"></i>
+           Your Balance is : 
+      </div>
+       <div class="text" *ngIf="balance">{{ balance }} <i class="bi bi-currency-euro"></i></div> 
+      </div>
+
+    <div class="container-bottom">
+
+      <button (click)="printPage()">
+        <i class="bi bi-printer-fill"></i>
+      </button>
+
+      <button (click)="onClose()">
+          <i class="bi bi-house-door-fill"></i>
+      </button>
+  
+      <button (click)="onLogOut()">
+          <i class="bi bi-x-circle-fill"></i>
+      </button>
+      </div>
+             
+  </div>
+
+  <app-print-page></app-print-page>
+  

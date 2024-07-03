@@ -1,0 +1,50 @@
+<div class="container">
+	<div class="receipt">
+    <div class="break">
+      *******************************************
+    </div>
+		<h2 class="header">ATM TRANSACTION</h2>
+    <div class="text">
+			LOTO BANK
+		</div>
+    <div class="break">
+      *******************************************
+    </div>
+		<div class="details">
+			<div class="detail">TERMINAL#</div>
+			<div class="detail"></div>
+		</div>
+		<div class="details">
+			<div class="detail">SEQUENCE#</div>
+			<div class="detail"></div>
+		</div>
+		<div class="details">
+			<div class="detail">DATE</div>
+			<div class="detail">{{ currentDate }}</div>
+		</div>
+    <div class="break">
+    </div>
+    <div class="details">
+			<div class="detail">ACCOUNT NUMBER</div>
+			<div class="detail" *ngIf="accountNumber">{{ accountNumber }}</div>
+		</div>
+    <div class="break">
+    </div>
+    <div class="details">
+			<div class="detail">CUSTOMER NAME</div>
+			<div class="detail" *ngIf="name">{{ name }}</div>
+		</div>
+
+    <div class="break">
+    </div>
+    <div class="details">
+			<div class="detail">AVAILABLE BALANCE</div>
+			<div class="detail" *ngIf="balance">{{ balance }}<i class="bi bi-currency-euro"></i></div>
+		</div>
+	
+			<div class="break">
+        *******************************************
+      </div>
+
+      <div class="text">Thank you for using Loto Bank ATM</div>
+</div>
