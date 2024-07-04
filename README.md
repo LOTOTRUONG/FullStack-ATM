@@ -2,7 +2,6 @@
 Branch: master
 
 ## :orange_book: Description de projet
-Encryptix Internship Program
 
 TASK 3: ATM Interface
 
